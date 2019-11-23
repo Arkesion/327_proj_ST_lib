@@ -5,23 +5,22 @@
  */
 
 #include "includes/Smalltalk_American.h"
+#include "includes/constants.h"
 
 using namespace std;
 
-Smalltalk_American::Smalltalk_American(int _iPerson) {
-	iPerson = _iPerson;
+Smalltalk_American::Smalltalk_American(int _iPerson):Smalltalk(AMERICAN, iPerson){
+	Smalltalk_American::populatePhrases();
 }
 
-Smalltalk_American::Smalltalk_American(string _nationality, int _iPerson) {
-	nationality = _nationality;
-	iPerson = _iPerson;
-}
+Smalltalk_American::Smalltalk_American(std::string myNationality, int iPerson) : Smalltalk(myNationality, iPerson) { }
 
-Smalltalk_American::~Smalltalk_American(void) {
-	nationality = "";
-	iPerson = 0;
-}
+Smalltalk_American::~Smalltalk_American() { }
 
-virtual void populatePhrases() {
-
+void Smalltalk_American::populatePhrases() {
+	this->mySmallTalk.push_back(AMERICAN_PHRASE_1);
+	this->mySmallTalk.push_back(AMERICAN_PHRASE_2);
+	this->mySmallTalk.push_back(AMERICAN_PHRASE_3);
+	this->mySmallTalk.push_back(AMERICAN_PHRASE_4);
+	this->mySmallTalk.push_back(AMERICAN_PHRASE_5);
 }
