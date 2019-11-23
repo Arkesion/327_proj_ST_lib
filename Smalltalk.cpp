@@ -21,9 +21,8 @@ string Smalltalk::saySomething() {
 }
 
 string Smalltalk::getTime() {
-	if(this->pWatch) {
-		std::string currentTime = this->pWatch->getTime();
-		return THE_CURRENT_TIME_IS + currentTime;
+	if(pWatch != 0){
+		return THE_CURRENT_TIME_IS + pWatch.get()->getTime();
 	}
 	return I_DO_NOT_HAVE_A_WATCH;
 }
