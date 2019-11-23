@@ -1,10 +1,3 @@
-//
-/*
- * Functions.cpp
- *
- *  Created on: Nov 5, 2017
- *      Author: keith
- */
 #include <iostream>
 #include <memory>
 
@@ -22,7 +15,7 @@ std::vector<std::unique_ptr<Smalltalk>> getPeople(int numBrit,
 		int numAmerican, int numbAmericanDonutEnthusiest,
 		int numWatches) {
 	
-	//create a vector to hold SmallTalk unique pointers
+	std::vector<std::unique_ptr<Smalltalk>> myVector;
 
 		//add brits to vector
 
@@ -36,4 +29,5 @@ std::vector<std::unique_ptr<Smalltalk>> getPeople(int numBrit,
 		//from this function(see Smalltalk header for hints)
 
 		//return your vector
+	return myVector;
 }
