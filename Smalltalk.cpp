@@ -16,7 +16,9 @@ Smalltalk::Smalltalk(string _myNationality, int _iPerson) {
 };
 
 Smalltalk::~Smalltalk(void) {
-
+	nationality = "";
+	iPerson = 0;
+	current_phrase = 0;
 }
 
 string Smalltalk::saySomething() {

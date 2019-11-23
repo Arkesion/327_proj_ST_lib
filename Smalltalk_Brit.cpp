@@ -8,10 +8,11 @@
 using namespace std;
 
 Smalltalk_Brit::Smalltalk_Brit(int _iPerson) {
+	iPerson = _iPerson;
 }
 
 Smalltalk_Brit::~Smalltalk_Brit(void) {
-
+	iPerson = 0;
 }
 
 virtual void populatePhrases() {
